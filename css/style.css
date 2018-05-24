@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#landing {
+    background-image: url('../img/landing.jpg');
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+    margin-left: 20px;
+}
+
+#menu {
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+}
+
+#logo {
+    align-self: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+}
+
+#container h1 {
+    font-size: 50px;
+}
+
+#container p {
+    font-size: 20px;
+}
+
+#button {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+#button .button {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.59);
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#button .button:hover {
+    background-color: #ccc;
+    color: #111;
+}
+
+/* scroll back to top button */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 35px;
+    color: #dad5d5;
+}
+
+.side_menu {
+    height: 30%;
+    width: 0;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.open {
+    height: 30%;
+    width: 150px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.side_menu ul {
+    width: 100%;
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.side_menu ul li {
+    padding-top: 10px;
+}
+
+.side_menu a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 20px;
+}
+
+.side_menu a.active {
+    color: #fff;
+    font-size: 22px;
+}
+
+.side_menu a:hover {
+    color: #fff;
+}
+
+/* .side_menu .btn-close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 25px;
+} */
+
+.newyork, .cleveland, .chicago {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.newyork {
+    background-image: url('../img/ny_city.jpeg');
+    height: 100vh;
+}
+
+.cleveland {
+    background-image: url('../img/cle_city.jpg');
+    height: 100vh;
+}
+
+.chicago {
+    background-image: url('../img/chi_town.jpg');
+    height: 100vh;
+}
+
+.ptext {
+    margin: auto;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border {
+    background-color: #111;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    opacity: 0.8;
+    color: #fff;
+    padding: 20px;
+}
+
+.section {
+    display: flex;
+    margin: 0 auto 5%;
+    height: 300px;
+    background-color: transparent;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    max-height: 300px;
+    text-align: center;
+}
+
+.images .container {
+    position: relative;
+    margin: 0 15px 0 15px;
+    height: 300px;
+    width: 300px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.images img {
+    display: block;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border: 3px solid #fff;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    opacity: 0.9;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: width .3s ease .3s;
+    /* padding: 15px; */
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    max-height: 300px;
+    max-width: 300px;
+    top: 5%;
+    text-align: center;
+    margin: 25px 15px 0;
+    overflow: hidden;
+    transition: opacity 1s ease .4s;
+    /* transition-delay: 2s; */
+    opacity: 0;
+}
+
+.content h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.content p {
+    margin: 10px 15px 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.container:hover .overlay {
+    width: 100%;
+}
+
+.overlay:hover .content {
+    opacity: 1;
+}
